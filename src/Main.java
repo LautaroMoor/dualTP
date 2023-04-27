@@ -10,22 +10,34 @@ public class Main {
             System.out.println("3) Obtener Animales");
             System.out.println("4) Obtener Dueños");
             System.out.println("5) Salir del Programa");
+            System.out.print("--> ");
             try {
-                int c = sc.nextInt();
-                if (!(c>=0 && c<=5)){
+                int option = sc.nextInt();
+                if (!(option>=0 && option<=5)){
                     System.out.println("Ingrese una opción correcta");
                     continue;
                 }
-                if (c == 5){
+                if (option == 5){
                     System.out.println("Saliendo del Sistema...");
                     break;
                 }
-                switch (c){
+                switch (option){
                     case 1:
+                        System.out.println("Opción Seleccionada: " + option);
+                        break;
+                    case 2:
+                        System.out.println("Opción Seleccionada: " + option);
+                        break;
+                    case 3:
+                        System.out.println("Opción Seleccionada: " + option);
+                        break;
+                    case 4:
+                        System.out.println("Opción Seleccionada: " + option);
                         break;
                 }
             }catch (InputMismatchException e){
                 System.out.println("Error en el ingreso de datos...");
+                sc.nextLine();
             }
         }while(true);
     }
