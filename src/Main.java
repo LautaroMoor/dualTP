@@ -38,19 +38,22 @@ public class Main {
                 case 1:
                     System.out.println("Opción Seleccionada: " + option);
                     Menu.optionOne(animalList);
-                    System.out.println(animalList.toString());
                     break;
                 case 2:
                     System.out.println("Opción Seleccionada: " + option);
+                    Menu.optionTwo(animalList);
                     break;
                 case 3:
                     System.out.println("Opción Seleccionada: " + option);
+                    Menu.optionThree(animalList);
                     break;
                 case 4:
                     System.out.println("Opción Seleccionada: " + option);
+                    Menu.optionFour(animalList);
                     break;
                 case 5:
                     System.out.println("Opción Seleccionada: " + option);
+                    Menu.optionFive(animalList);
                     break;
             }
         }while(true);

@@ -44,4 +44,16 @@ public class Dog extends Animal{
                 ", raza='" + breed + '\'' +
                 '}';
     }
+    @Override
+    public void showInfo(){
+        System.out.println("Tipo de animal: "+ getClass().getSimpleName());
+        System.out.println("Nombre: "+ getName());
+        System.out.println("Edad: "+ getAge());
+        System.out.println("Dueño: "+ getOwner().getName());
+        System.out.println("DNI Dueño: "+ getOwner().getDni());
+        System.out.println("Direccion Dueño: "+ getOwner().getAddress());
+        System.out.println("Sexo: "+ getGender());
+        System.out.println("Peso(grs): "+ getWeight());
+        System.out.println("Raza: "+ getBreed());
+    }
 }

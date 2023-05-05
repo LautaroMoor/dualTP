@@ -58,8 +58,8 @@ public class Animal {
     public void setWeight(Double weight) {
         this.weight = weight;
     }
-    protected String welcome(){
-        return "Hola me llamo " + this.name + " y soy un " + this.getClass();
+    protected void welcome(){
+        System.out.println("Hola me llamo " + this.name + " y soy un " + this.getClass().getSimpleName());
     }
     @Override
     public boolean equals(Object o) {
@@ -84,4 +84,16 @@ public class Animal {
                 ", peso=" + weight +
                 '}';
     }
+
+    public void showInfo(){
+        System.out.println("Tipo de animal: "+ getClass().getSimpleName());
+        System.out.println("Nombre: "+ getName());
+        System.out.println("Edad: "+ getAge());
+        System.out.println("Dueño: "+ getOwner().getName());
+        System.out.println("DNI Dueño: "+ getOwner().getDni());
+        System.out.println("Direccion Dueño: "+ getOwner().getAddress());
+        System.out.println("Sexo: "+ getGender());
+        System.out.println("Peso(grs): "+ getWeight());
+    }
+
 }

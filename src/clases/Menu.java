@@ -189,4 +189,56 @@ public class Menu {
         }
         animalList.add(newAnimal);
     }
+    public static void optionTwo(ArrayList<Animal> animalList){
+        if (animalList.size() == 0) {
+            System.out.println("---- No hay animales cargados ----");
+        }else{
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Ingrese la posición del animal en la lista: ");
+            int pos = 0;
+            try {
+                pos = sc.nextInt();
+                sc.nextLine();
+            }catch (InputMismatchException e){
+                System.out.println("Error: Ingreso de datos invalido");
+            }
+            if (pos >= 0 && pos <= animalList.size()) {
+                System.out.println(pos);
+                animalList.remove(--pos);
+                System.out.println("Animal Eliminado de la lista correctamente!");
+            }else{
+                System.out.println("Ingrese un posición valida!");
+            }
+
+        }
+    }
+    public static void optionThree(ArrayList<Animal> animalList){
+        System.out.println("Cantidad de Animales en la lista: " + animalList.size());
+    }
+    public static void optionFour(ArrayList<Animal> animalList) {
+        if (animalList.size() == 0) {
+            System.out.println("---- No hay animales cargados ----");
+        }else{
+            System.out.println("---- Animales actualmente en la guardería ----");
+            int i = 1;
+            for (Animal animal: animalList) {
+                animal.showInfo();
+                System.out.println("Posición en la lista: "+ i);
+                System.out.println("--------------------------------------");
+                i++;
+            }
+        }
+    }
+    public static void optionFive(ArrayList<Animal> animalList) {
+        System.out.println("--------------------------------------");
+        if (animalList.size() == 0) {
+            System.out.println("---- No hay animales cargados ----");
+        }else{
+            for (Animal animal: animalList) {
+                animal.welcome();
+                System.out.println("--------------------------------------");
+            }
+        }
+
+    }
 }

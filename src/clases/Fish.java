@@ -12,8 +12,13 @@ public class Fish extends Animal{
         this.environment = environment;
     }
 
-    public Environment getEnvironment() {
-        return environment;
+    public String getEnvironment() {
+        if (environment == Environment.COLD) {
+            return "Fria";
+        }else{
+            return "Tropical";
+        }
+
     }
 
     public void setEnvironment(Environment environment) {
@@ -44,5 +49,17 @@ public class Fish extends Animal{
                 ", peso=" + weight +
                 ", ambiente=" + environment +
                 '}';
+    }
+    @Override
+    public void showInfo(){
+        System.out.println("Tipo de animal: "+ getClass().getSimpleName());
+        System.out.println("Nombre: "+ getName());
+        System.out.println("Edad: "+ getAge());
+        System.out.println("Dueño: "+ getOwner().getName());
+        System.out.println("DNI Dueño: "+ getOwner().getDni());
+        System.out.println("Direccion Dueño: "+ getOwner().getAddress());
+        System.out.println("Sexo: "+ getGender());
+        System.out.println("Peso(grs): "+ getWeight());
+        System.out.println("Tipo de Agua: "+ getEnvironment());
     }
 }
