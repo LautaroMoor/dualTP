@@ -35,25 +35,14 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return "Dog{" +
-                "nombre='" + name + '\'' +
-                ", edad=" + age +
-                ", dueño=" + owner.getName() +
-                ", genero=" + gender +
-                ", peso=" + weight +
-                ", raza='" + breed + '\'' +
-                '}';
-    }
-    @Override
-    public void showInfo(){
-        System.out.println("Tipo de animal: "+ getClass().getSimpleName());
-        System.out.println("Nombre: "+ getName());
-        System.out.println("Edad: "+ getAge());
-        System.out.println("Dueño: "+ getOwner().getName());
-        System.out.println("DNI Dueño: "+ getOwner().getDni());
-        System.out.println("Direccion Dueño: "+ getOwner().getAddress());
-        System.out.println("Sexo: "+ getGender());
-        System.out.println("Peso(grs): "+ getWeight());
-        System.out.println("Raza: "+ getBreed());
+        return "Tipo de Animal: " + getClass().getSimpleName() + "\n"+
+                "Nombre: " + name + "\n"+
+                "Edad: " + age + "\n"+
+                "Dueño: " + getOwner().getName() + "\n"+
+                "DNI Dueño: " + getOwner().getDni() + "\n"+
+                "Sexo: " + gender + "\n"+
+                "Peso: " + weight + " grs"+ "\n"+
+                "Raza: " + breed + " grs"+ "\n"
+                ;
     }
 }

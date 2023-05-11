@@ -21,7 +21,6 @@ public class Main {
             System.out.print("--> ");
             try {
                 option = sc.nextInt();
-
             }catch (InputMismatchException e){
                 System.out.println("Error en el ingreso de datos...");
                 sc.nextLine(); // Salto de linea para Scanner

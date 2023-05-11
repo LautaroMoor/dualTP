@@ -222,7 +222,7 @@ public class Menu {
             System.out.println("---- Animales actualmente en la guardería ----");
             int i = 1;
             for (Animal animal: animalList) {
-                animal.showInfo();
+                System.out.println(animal.toString());
                 System.out.println("Posición en la lista: "+ i);
                 System.out.println("--------------------------------------");
                 i++;
